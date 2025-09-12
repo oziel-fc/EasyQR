@@ -25,6 +25,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    gap: 20px;
 }
 
 .link_logo {
@@ -45,5 +46,6 @@ header {
 }
 
 .about {
+    font-size: 20px;
     margin-right: 10px;
 }
