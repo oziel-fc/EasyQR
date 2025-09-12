@@ -1,0 +1,35 @@
+:root {
+    --font-color: white;
+    --primary-dark-color: #020109;
+    --secondary-dark-color: #0e0d17;
+    --tertiary-dark-color: #1d1b2e;
+    --logo-color: #5e308f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--secondary-dark-color);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--font-color);
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;      
+  font: inherit;       
+  line-height: normal; 
+  cursor: pointer;
+}

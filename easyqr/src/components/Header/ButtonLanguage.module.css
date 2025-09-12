@@ -1,0 +1,32 @@
+/* Change language button */
+.language {
+    height: 40px;
+    width: 150px;
+}
+
+.change_language_btn {
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--logo-color);
+    border-radius: 10px;
+    background-color: #1d1b2e;
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+}
+
+.language_info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow_opt_lang {
+    width: 20px;
+}
+
+.img_country {
+    height: auto;
+    width: 25px;
+}
