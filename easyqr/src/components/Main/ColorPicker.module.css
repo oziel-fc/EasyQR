@@ -1,0 +1,43 @@
+.color_picker {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.button_color_picker {
+    background-color: var(--tertiary-dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
+    width: 130px;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.color_column {
+    display: inline-block;
+}
+
+.current_color {
+    width: 36px;
+    height: 14px;
+    border-radius: 3px;
+}
+
+.sketch {
+    position: absolute;
+    z-index: 1001;
+    margin-top: 10px;
+    cursor: auto;
+}
+
+/* fill all the page when activated (active when has click on button) */
+.cover {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+

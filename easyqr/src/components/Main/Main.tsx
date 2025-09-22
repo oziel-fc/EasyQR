@@ -1,15 +1,23 @@
 import styles from './Main.module.css'
-import PrimaryColorPicker from './PrimaryColorPicker'
+import ColorPicker from './ColorPicker'
+import FontsPicker from './FontsPicker'
+import { useState } from 'react'
 
 const Main = () => {
+  const [primaryColor, setPrimaryColor] = useState('#ffffff')
+  const [secondaryColor, setSecondaryColor] = useState('#000000')
+
   return (
     <div className={styles.container}>
         <div className={styles.col_generator}>
             <div className={styles.settings_qr}>
-                <div className={styles.button_font}></div>
-                <PrimaryColorPicker/>
-                <div className={styles.secondary_color}></div>
-                <input type="text" name="" id="" />
+              <div className={styles.top_row}>
+                <FontsPicker/>
+                <ColorPicker color={primaryColor} onChange={setPrimaryColor} titleItem='Fundo'/>
+                <ColorPicker color={secondaryColor} onChange={setSecondaryColor} titleItem='Principal'/>
+              </div>
+                
+              <input type="text" name="" id="" />
             </div>
             <div className={styles.qr_code}></div>
             <div className={styles.generator_qr}></div>
