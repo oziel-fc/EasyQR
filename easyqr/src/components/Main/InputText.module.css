@@ -1,0 +1,22 @@
+.input_row {
+    position: relative;
+    width: 65%;
+    margin: 0;
+    padding: 0;
+}
+
+#input_text {
+    color: white;
+    width: 100%;
+    background-color: transparent;
+    appearance: none;
+    border: 2px solid var(--tertiary-dark-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#input_text::placeholder {
+    color: #3f3c5e;
+    font-style: italic;
+    text-align: center;
+}

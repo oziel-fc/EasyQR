@@ -21,12 +21,6 @@ const FontSelector = () => {
           </option>
         ))}
       </select>
-
-      {selectedFont && (
-        <p style={{ fontFamily: selectedFont, marginTop: "10px" }}>
-          Esta é a fonte selecionada
-        </p>
-      )}
     </div>
   );
 };
