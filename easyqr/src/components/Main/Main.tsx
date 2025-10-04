@@ -2,6 +2,9 @@ import styles from './Main.module.css'
 import ColorPicker from './ColorPicker'
 import FontsPicker from './FontsPicker'
 import InputText from './InputText'
+import QRCode from './QRCode'
+import GeneratorButton from './GeneratorButton'
+import DownloadButton from './DownloadButton'
 import { useState } from 'react'
 
 const Main = () => {
@@ -19,10 +22,16 @@ const Main = () => {
                 <ColorPicker color={secondaryColor} onChange={setSecondaryColor} titleItem='Shape Color'/>
               </div>
                 
-              <InputText inputTitle='Enter your URL here' elementName='title qr code'/>
+              <InputText inputTitle='Enter your URL here' elementName='input url'/>
+              <InputText inputTitle='Enter a description (optional)' elementName='input optional title'/>
             </div>
-            <div className={styles.qr_code}></div>
-            <div className={styles.generator_qr}></div>
+            <div className={styles.qr_code}>
+              <QRCode/>
+            </div>
+            <div className={styles.generator_qr}>
+              <GeneratorButton textButton='Generate QRCode'/>
+              <DownloadButton textButton='Download QR'/>
+            </div>
           </div>        
         </div>
     </div>

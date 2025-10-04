@@ -1,0 +1,7 @@
+.download_button {
+    color: var(--logo-color);
+    width: 25%;
+    height: 30%;
+    border-radius: 5px;
+    border: 1px solid var(--logo-color);
+}

@@ -47,9 +47,16 @@
 .qr_code {
     height: 40%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .generator_qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 20%;
     width: 100%;
+    gap: 20px;
 }

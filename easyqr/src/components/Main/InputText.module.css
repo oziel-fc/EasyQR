@@ -9,7 +9,7 @@
     color: white;
     width: 100%;
     background-color: transparent;
-    appearance: none;
+    /* appearance: none; */
     border: 2px solid var(--tertiary-dark-color);
     border-radius: 5px;
     padding: 10px;
