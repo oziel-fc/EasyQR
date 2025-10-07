@@ -28,14 +28,14 @@
     border-radius: 50%;
     transition: transform 0.3s;
 
-    background-image: url("@assets/moon.png");
+    background-image: url("@assets/header/moon.png");
     background-size: cover;   
     background-position: center;
 }
 
 input:checked + .slider::before {
     transform: translateX(30px);    /* move the button */
-    background-image: url("@assets/sun.png");
+    background-image: url("@assets/header/sun.png");
     background-size: cover;
     background-position: center;
 }

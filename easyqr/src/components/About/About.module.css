@@ -12,7 +12,7 @@
     width: 1100px;
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -29,9 +29,16 @@
 .tool_description {
     width: 30%;
     height: 100%;
+    padding: 24px;
 }
 
 .tool_description:hover {
-    border: 2px solid var(--primary-dark-color);
     border-radius: 20px;
+    background-color: var(--primary-dark-color);
+    cursor: pointer;
+}
+
+.tool_description img{
+    width: 40px;
+    height: 40px;
 }

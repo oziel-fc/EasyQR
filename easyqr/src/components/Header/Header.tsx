@@ -1,7 +1,7 @@
 import ButtonLanguage from './ButtonLanguage';
 import ButtonTheme from './ButtonTheme';
 import styles from './Header.module.css';
-import logo from "@assets/easyqr_logo.png";
+import logo from "@assets/header/easyqr_logo.png";
 
 const Header = () => {
   return (

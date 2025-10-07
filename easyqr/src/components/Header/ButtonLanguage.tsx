@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./ButtonLanguage.module.css";
-import arrow_down from "@assets/arrow_down.png";
-import arrow_up from "@assets/arrow_up.png";
+import arrow_down from "@assets/header/arrow_down.png";
+import arrow_up from "@assets/header/arrow_up.png";
 
 const ButtonLanguage = () => {
   const [menu, showMenu] = useState(false)
