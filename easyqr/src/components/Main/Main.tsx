@@ -12,7 +12,7 @@ const Main = () => {
   const [secondaryColor, setSecondaryColor] = useState('#000000')
 
   return (
-    <div className={styles.container}>
+    <div className={styles.qr_container}>
         <div className={styles.col_generator}>
           <div className={styles.center_col}>
             <div className={styles.settings_qr}>
