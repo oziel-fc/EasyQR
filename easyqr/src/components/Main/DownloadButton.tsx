@@ -1,12 +1,13 @@
 import styles from "./DownloadButton.module.css"
 
-type ButtonText = {
+type ButtonTextProps = {
   textButton: string;
+  addClass?: string;
 }
 
-const DownloadButton = ({textButton}: ButtonText) => {
+const DownloadButton = ({textButton, addClass}: ButtonTextProps) => {
   return (
-    <button className={styles.download_button}>{textButton}</button>
+    <button className={`${styles.download_button} ${addClass ?? ""}`}>{textButton}</button>
   )
 }
 

@@ -1,6 +1,10 @@
 .generator_button {
-    width: 25%;
-    height: 30%;
     border-radius: 5px;
-    background-color: var(--logo-color);
+    background: linear-gradient(45deg, rgb(14 0 57), rgb(87 98 230), rgb(118 68 183), rgb(38 0 89));
+    background-size: 200%;
+    transition: background-position 0.5s ease;
+}
+
+.generator_button:hover {
+    background-position: 100% 0;
 }

@@ -29,8 +29,8 @@ const Main = () => {
               <QRCode/>
             </div>
             <div className={styles.generator_qr}>
-              <GeneratorButton textButton='Generate QRCode'/>
-              <DownloadButton textButton='Download QR'/>
+              <GeneratorButton textButton='Generate QRCode' addClass={styles.lower_button}/>
+              <DownloadButton textButton='Download QR' addClass={styles.lower_button}/>
             </div>
           </div>        
         </div>

@@ -1,12 +1,13 @@
 import styles from "./GeneratorButton.module.css"
 
-type ButtonText = {
+type ButtonTextProps = {
     textButton: string;
+    addClass?: string
 }
 
-const GeneratorButton = ({textButton}: ButtonText) => {
+const GeneratorButton = ({textButton, addClass}: ButtonTextProps) => {
   return (
-    <button className={styles.generator_button}>{textButton}</button>
+    <button className={`${styles.generator_button} ${addClass ?? ""}`}>{textButton}</button>
   )
 }
 
