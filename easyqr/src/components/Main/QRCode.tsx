@@ -4,9 +4,9 @@ import styles from "./QRCode.module.css"
 const QrCodeWithLogo = () => {
   return (
     <div className={styles.div_qrcode} style={{ position: "relative", display: "inline-block" }}>
-      <QRCodeCanvas
+      <QRCodeCanvas className={styles.object_qr}
         value="null"
-        size={270}
+        size={275}
         bgColor="#020109"
         fgColor="#1d1b2e"
         level="H"
