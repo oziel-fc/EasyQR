@@ -1,6 +1,5 @@
 import styles from './Main.module.css'
 import ColorPicker from './ColorPicker'
-import FontsPicker from './FontsPicker'
 import InputText from './InputText'
 import QRCode from './QRCode'
 import GeneratorButton from './GeneratorButton'
@@ -10,6 +9,7 @@ import { useState } from 'react'
 const Main = () => {
   const [primaryColor, setPrimaryColor] = useState('#ffffff')
   const [secondaryColor, setSecondaryColor] = useState('#000000')
+  const [urlValue, setValue] = useState('')
 
   return (
     <section className={styles.qr_container}>
@@ -17,13 +17,12 @@ const Main = () => {
           <div className={styles.center_col}>
             <div className={styles.settings_qr}>
               <div className={styles.top_row}>
-                <FontsPicker/>
                 <ColorPicker color={primaryColor} onChange={setPrimaryColor} titleItem='Background'/>
                 <ColorPicker color={secondaryColor} onChange={setSecondaryColor} titleItem='Shape Color'/>
               </div>
                 
-              <InputText inputTitle='Enter your URL here' elementName='input url'/>
-              <InputText inputTitle='Enter a description (optional)' elementName='input optional title'/>
+              <InputText inputTitle='Enter your URL here' elementName='input url' value={urlValue} onChange={setValue}/>
+              <InputText inputTitle='Enter a description (optional)' elementName='input optional title' value={urlValue} onChange={setValue}/>
             </div>
             <div className={styles.qr_code}>
               <QRCode/>
