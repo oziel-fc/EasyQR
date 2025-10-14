@@ -13,7 +13,7 @@ const Footer = () => {
             </a>
         </li>
         <li>
-            <a href="www.linkedin.com/in/oziel-felipe" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/oziel-felipe/" target="_blank" rel="noopener noreferrer">
                 <img src={linkedin_icon} alt="linkedin"/>
             </a>
         </li>

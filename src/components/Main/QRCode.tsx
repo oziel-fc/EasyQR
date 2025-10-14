@@ -1,18 +1,25 @@
 import { QRCodeCanvas } from "qrcode.react";
 import styles from "./QRCode.module.css"
 
-const QrCodeWithLogo = () => {
+type QRCodeProps = {
+  backColor: string;
+  shapeColor: string;
+  QRCodeValue: string;
+  externLogo: string
+}
+
+const QRCode = ({backColor, shapeColor, QRCodeValue, externLogo}: QRCodeProps) => {
   return (
     <div className={styles.div_qrcode} style={{ position: "relative", display: "inline-block" }}>
       <QRCodeCanvas className={styles.object_qr}
-        value="null"
+        value={QRCodeValue ? QRCodeValue : "null"}
         size={275}
-        bgColor="#020109"
-        fgColor="#1d1b2e"
+        bgColor={backColor}
+        fgColor={shapeColor}
         level="H"
         marginSize={1}
         imageSettings={{
-          src: "",
+          src: `${externLogo}`,
           x: undefined,   
           y: undefined,   
           height: 40,     
@@ -24,4 +31,4 @@ const QrCodeWithLogo = () => {
   );
 };
 
-export default QrCodeWithLogo;
+export default QRCode;

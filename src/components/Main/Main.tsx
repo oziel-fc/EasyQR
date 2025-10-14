@@ -7,9 +7,10 @@ import DownloadButton from './DownloadButton'
 import { useState } from 'react'
 
 const Main = () => {
-  const [primaryColor, setPrimaryColor] = useState('#ffffff')
-  const [secondaryColor, setSecondaryColor] = useState('#000000')
-  const [urlValue, setValue] = useState('')
+  const [primaryColor, setPrimaryColor] = useState("#020109")
+  const [secondaryColor, setSecondaryColor] = useState("#1d1b2e")
+  const [URLValue, setURLValue] = useState('')
+  const [linkLogo, setLogo] = useState('')
 
   return (
     <section className={styles.qr_container}>
@@ -21,11 +22,11 @@ const Main = () => {
                 <ColorPicker color={secondaryColor} onChange={setSecondaryColor} titleItem='Shape Color'/>
               </div>
                 
-              <InputText inputTitle='Enter your URL here' elementName='input url' value={urlValue} onChange={setValue}/>
-              <InputText inputTitle='Enter a description (optional)' elementName='input optional title' value={urlValue} onChange={setValue}/>
+              <InputText inputTitle='Enter text for the QR Code' elementName='input url' value={URLValue} onChange={setURLValue}/>
+              <InputText inputTitle='Enter a URL of external logo (optional)' elementName='input optional logo' value={linkLogo} onChange={setLogo}/>
             </div>
             <div className={styles.qr_code}>
-              <QRCode/>
+              <QRCode backColor={primaryColor} shapeColor={secondaryColor} QRCodeValue={URLValue.trim()} externLogo={linkLogo}/>
             </div>
             <div className={styles.generator_qr}>
               <GeneratorButton textButton='Generate QRCode' addClass={styles.lower_button}/>
