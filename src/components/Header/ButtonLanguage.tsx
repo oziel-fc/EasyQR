@@ -28,13 +28,13 @@ const ButtonLanguage = () => {
           {/* Set a language */}
           <img className={styles.img_country} src={selectedLang.flag} alt="flag"/>
           <span>{selectedLang.name}</span>
-          <img className={styles.arrow_btn_menu} src={`${menu ? arrow_up : arrow_down}`} alt="arrow down"/>
+          <img className={styles.arrow_btn_menu} src={`${menu ? arrow_up : arrow_down}`} alt="arrow symbol"/>
         </div>
       </button>
       
       {menu && 
       <div className={styles.menu_languages}>
-        <div className={styles.position_menu}>
+        <div className={styles.padding_menu}>
           {languages.map((lang) => (
               <div
                 key={lang.name}

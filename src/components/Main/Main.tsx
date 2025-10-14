@@ -29,7 +29,7 @@ const Main = () => {
               <QRCode backColor={primaryColor} shapeColor={secondaryColor} QRCodeValue={URLValue.trim()} externLogo={linkLogo}/>
             </div>
             <div className={styles.generator_qr}>
-              <GeneratorButton textButton='Generate QRCode' addClass={styles.lower_button}/>
+              {/* <GeneratorButton textButton='Generate QRCode' addClass={styles.lower_button}/> */}
               <DownloadButton textButton='Download QR' addClass={styles.lower_button}/>
             </div>
           </div>        
