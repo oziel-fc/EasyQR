@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "./ButtonLanguage.module.css";
 import arrow_down from "@assets/header/arrow_down.png";
 import arrow_up from "@assets/header/arrow_up.png";
@@ -16,13 +16,33 @@ const ButtonLanguage = () => {
     { flag: "https://flagcdn.com/es.svg", name: "Español" },
   ];
 
+  // Change the flag and name
   const handleSelect = (lang: { flag: string; name: string }) => {
     setSelectedLang(lang);
     showMenu(false);    // close menu
   };
 
+  // Reference the button element
+  const ref = useRef<HTMLDivElement>(null);
+  const [widthButton, setWidthButton] = useState('')
+
+  // Update the width value
+  useEffect(() => {
+    if (ref.current) {
+      const observer = new ResizeObserver(() => {
+        const newWidth: string = `${ref.current?.offsetWidth}`
+        setWidthButton(`${newWidth}px`)
+      })
+
+      observer.observe(ref.current)
+      return () => observer.disconnect();
+    }
+  }, []);
+  console.log(widthButton)
+
+
   return (
-    <div className={styles.language}>
+    <div className={styles.language} ref={ref}> {/* Element referenced */}
       <button className={styles.change_language_btn} onClick={() => showMenu(!menu)}>
         <div className={styles.language_info}>
           {/* Set a language */}
@@ -33,7 +53,7 @@ const ButtonLanguage = () => {
       </button>
       
       {menu && 
-      <div className={styles.menu_languages}>
+      <div className={styles.menu_languages} style={{width: `${widthButton}`}}>
         <div className={styles.padding_menu}>
           {languages.map((lang) => (
               <div
