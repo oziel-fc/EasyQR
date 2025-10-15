@@ -29,16 +29,15 @@ const ButtonLanguage = () => {
   // Update the width value
   useEffect(() => {
     if (ref.current) {
-      const observer = new ResizeObserver(() => {
+      const Observer = new ResizeObserver(() => {
         const newWidth: string = `${ref.current?.offsetWidth}`
         setWidthButton(`${newWidth}px`)
       })
 
-      observer.observe(ref.current)
-      return () => observer.disconnect();
+      Observer.observe(ref.current)
+      return () => Observer.disconnect();
     }
   }, []);
-  console.log(widthButton)
 
 
   return (
@@ -53,7 +52,7 @@ const ButtonLanguage = () => {
       </button>
       
       {menu && 
-      <div className={styles.menu_languages} style={{width: `${widthButton}`}}>
+      <div className={styles.menu_languages} style={{width: `${widthButton}`}}> {/* Setting the width value*/}
         <div className={styles.padding_menu}>
           {languages.map((lang) => (
               <div
