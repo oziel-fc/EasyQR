@@ -64,6 +64,7 @@
     transform: skew(-24deg);
     clip-path: circle(0% at 50% 50%);
     transition: all 0.64s cubic-bezier(0.23, 1, 0.32, 1);
+    box-shadow: rgb(25 13 38 / 10%) 0px 0px 0px 0px, rgb(30 13 38 / 10%) 0px 4px 11px;
 }
 
 .hover_change:hover::before {

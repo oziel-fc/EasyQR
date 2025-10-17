@@ -15,16 +15,17 @@
     align-items: center;
     position: relative;
 }
-
 .download_button:hover {
     background-position: 100% 0;
 }
-
 .download_button img {
     position: absolute;
     width: 15px;
     right: 0;
     margin-right: 10px;
+}
+.download_button span {
+    color: white;
 }
 
 /* options */
@@ -65,6 +66,9 @@
 }
 .option_format:hover {
     background-color: #29263f;
+}
+.option_format span {
+    color: white
 }
 
 .img_download {

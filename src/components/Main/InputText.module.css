@@ -6,7 +6,7 @@
 }
 
 #input_text {
-    color: white;
+    color: var(--font-color);
     width: 100%;
     background-color: transparent;
     /* appearance: none; */

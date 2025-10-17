@@ -14,6 +14,9 @@
     gap: 10px;
     border-radius: 10px;
 }
+.button_color_picker span {
+    color: white;
+}
 
 .color_column {
     display: inline-block;
