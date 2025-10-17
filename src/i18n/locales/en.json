@@ -1,0 +1,21 @@
+{
+    "about": "About",
+    "background": "Background",
+    "shape": "Shape Color",
+    "input_content": "Enter text for the QR Code",
+    "input_logo": "Enter a URL of external logo (optional)",
+    "description_title": "EasyQR: Create your Free QR Code",
+    "description_subtext": "Customize with your style in just 3 steps",
+    "card_title_1": "Choose Your Content",
+    "card_title_2": "Customize And Design",
+    "card_title_3": "Download Your QRCode",
+    "card_description_1": "Enter any text in the input box to create the QR Code.",
+    "card_description_2": "Customize your QR Code in the best way, change colors and choose different logos.",
+    "card_description_3": "Get your QR code in different formats (png, svg, jpeg), make download and done.",
+    "about_title": "About EasyQR",
+    "about_text_1": "EasyQR is a free and intuitive tool that lets you generate QR Codes in seconds. With it, you can easily create customized codes for links, texts, numbers, contacts, Wi-Fi, and much more, all with just a few clicks.",
+    "about_text_2": "Quickly create fully customizable QR Codes. Choose a background color, main color, maybe a custom logo.",
+    "about_text_2_2": "Customize the code to your style.",
+    "about_text_3": "Finally, you can download and share the generated QR code in different formats. This project is part of my personal portfolio, you can find more information in the footer.",
+    "contact": "Contact"
+}

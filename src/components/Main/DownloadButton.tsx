@@ -36,14 +36,14 @@ const DownloadButton = ({textButton, addClass}: ButtonTextProps) => {
 
 
   return (
-    <div className={styles.download} ref={refWidthParent}>
+    <div className={styles.download} ref={refWidthParent}> {/* Element referenced */}
     <button className={`${styles.download_button} ${addClass ?? ""}`} onClick={() => showMenu(!menu)}>
       <span>{textButton}</span>
       <img src={menu ? arrow_up : arrow_down} alt="arrow symbol"/>
     </button>
 
     {menu && 
-      <div className={styles.size_menu} style={{width: `${widthButton}`}} > 
+      <div className={styles.size_menu} style={{width: `${widthButton}`}} > {/* Setting the width value */}
         <div className={styles.menu_formats}>
           <div className={styles.padding_menu}>
             {imgFormats.map((format) => (

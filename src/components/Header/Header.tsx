@@ -2,8 +2,12 @@ import ButtonLanguage from './ButtonLanguage';
 import ButtonTheme from './ButtonTheme';
 import styles from './Header.module.css';
 import logo from "@assets/header/easyqr_logo.png";
+import { useTranslation } from "react-i18next";
+
 
 const Header = () => {
+  const { t } = useTranslation();
+  
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -15,7 +19,7 @@ const Header = () => {
         </div>
         
         <div className={styles.right_header}>
-          <span className={styles.about}>About</span>
+          <span className={styles.about}>{t("about")}</span>
           <ButtonLanguage/>
           <ButtonTheme/>
         </div>

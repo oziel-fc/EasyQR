@@ -1,0 +1,21 @@
+{
+    "about": "Acerca de",
+    "background": "Color de Fondo",
+    "shape": "Color Principal",
+    "input_content": "Ingrese texto para el Código QR",
+    "input_logo": "Ingrese una URL de logo externo (opcional)",
+    "description_title": "EasyQR: Crea tu Código QR Gratis",
+    "description_subtext": "Personaliza con tu estilo en solo 3 pasos",
+    "card_title_1": "Elige Tu Contenido",
+    "card_title_2": "Personaliza y Diseña",
+    "card_title_3": "Descarga Tu Código QR",
+    "card_description_1": "Ingrese cualquier texto en la caja de entrada para crear el Código QR.",
+    "card_description_2": "Personaliza tu Código QR de la mejor manera, cambia colores y elige diferentes logos.",
+    "card_description_3": "Obtén tu Código QR en diferentes formatos (png, svg, jpeg), descarga y listo.",
+    "about_title": "Acerca de EasyQR",
+    "about_text_1": "EasyQR es una herramienta gratuita e intuitiva que te permite generar Códigos QR en segundos. Con ella, puedes crear códigos personalizados para enlaces, textos, números, contactos, Wi-Fi y mucho más, todo con solo unos clics.",
+    "about_text_2": "Crea rápidamente Códigos QR totalmente personalizables. Elige un color de fondo, color principal, tal vez un logo personalizado.",
+    "about_text_2_2": "Personaliza el código a tu estilo.",
+    "about_text_3": "Finalmente, puedes descargar y compartir el Código QR generado en diferentes formatos. Este proyecto forma parte de mi portafolio personal, puedes encontrar más información en el pie de página.",
+    "contact": "Contacto"
+}

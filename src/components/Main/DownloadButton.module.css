@@ -63,6 +63,9 @@
     cursor: pointer;
     transition: background-color 0.1s;
 }
+.option_format:hover {
+    background-color: #29263f;
+}
 
 .img_download {
     width: 15px;

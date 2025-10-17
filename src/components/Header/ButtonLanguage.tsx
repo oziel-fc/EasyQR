@@ -2,23 +2,49 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./ButtonLanguage.module.css";
 import arrow_down from "@assets/header/arrow_down.png";
 import arrow_up from "@assets/header/arrow_up.png";
+import i18n from '../../i18n';
+
 
 const ButtonLanguage = () => {
   const [menu, showMenu] = useState(false)
+  // Standard Language
   const [selectedLang, setSelectedLang] = useState({
     flag: "https://flagcdn.com/us.svg",
-    name: "English"
+    name: "English",
+    value: "en"
   });
 
+  useEffect(() => {
+    // Makes sure the choose value remains active
+    switch (i18n.language) {
+      case "pt":
+        setSelectedLang(languages[1])
+        break;
+      case "es":
+        setSelectedLang(languages[2])
+        break;
+      case "pl":
+        setSelectedLang(languages[3])
+        break;
+      default:
+        setSelectedLang(languages[0])
+        break;
+    }
+  }, [i18n.language]);
+
+  
+  // List of languages
   const languages = [
-    { flag: "https://flagcdn.com/us.svg", name: "English" },
-    { flag: "https://flagcdn.com/br.svg", name: "Português" },
-    { flag: "https://flagcdn.com/es.svg", name: "Español" },
+    { flag: "https://flagcdn.com/us.svg", name: "English", value: "en" },
+    { flag: "https://flagcdn.com/br.svg", name: "Português", value: "pt" },
+    { flag: "https://flagcdn.com/es.svg", name: "Español", value: "es" },
+    { flag: "https://flagcdn.com/pl.svg", name: "Polski", value: "pl" },
   ];
 
   // Change the flag and name
-  const handleSelect = (lang: { flag: string; name: string }) => {
+  const handleSelect = (lang: { flag: string; name: string; value: string }) => {
     setSelectedLang(lang);
+    i18n.changeLanguage(lang.value) // changing the language of page
     showMenu(false);    // close menu
   };
 
@@ -26,7 +52,7 @@ const ButtonLanguage = () => {
   const ref = useRef<HTMLDivElement>(null);
   const [widthButton, setWidthButton] = useState('')
 
-  // Update the width value
+  // Update the width value of child element
   useEffect(() => {
     if (ref.current) {
       const Observer = new ResizeObserver(() => {
@@ -44,13 +70,14 @@ const ButtonLanguage = () => {
     <div className={styles.language} ref={ref}> {/* Element referenced */}
       <button className={styles.change_language_btn} onClick={() => showMenu(!menu)}>
         <div className={styles.language_info}>
-          {/* Set a language */}
+          {/* Initial language */}
           <img className={styles.img_country} src={selectedLang.flag} alt="flag"/>
           <span>{selectedLang.name}</span>
           <img className={styles.arrow_btn_menu} src={`${menu ? arrow_up : arrow_down}`} alt="arrow symbol"/>
         </div>
       </button>
       
+      {/* Created element */}
       {menu && 
       <div className={styles.menu_languages} style={{width: `${widthButton}`}}> {/* Setting the width value*/}
         <div className={styles.padding_menu}>

@@ -1,11 +1,15 @@
 import styles from "./Footer.module.css";
 import github_icon from "@assets/footer/github_icon.png"
 import linkedin_icon from "@assets/footer/linkedin_icon.png"
+import { useTranslation } from "react-i18next";
+
 
 const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <footer className={styles.footer}>
-      <h1 className={styles.footer_title}>Contact</h1>
+      <h1 className={styles.footer_title}>{t("contact")}</h1>
       <div className={styles.contacts_icons}>
         <li>
             <a href="https://github.com/oziel-fc/EasyQR" target="_blank" rel="noopener noreferrer">

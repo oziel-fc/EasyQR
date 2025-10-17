@@ -1,0 +1,21 @@
+{
+    "about": "Sobre",
+    "background": "Cor de Fundo",
+    "shape": "Cor da Forma",
+    "input_content": "Insira o texto para o QR Code",
+    "input_logo": "Insira uma URL de logo externa (opcional)",
+    "description_title": "EasyQR: Crie seu QR Code Gratuito",
+    "description_subtext": "Personalize com seu estilo em apenas 3 passos",
+    "card_title_1": "Escolha Seu Conteúdo",
+    "card_title_2": "Personalize e Desenhe",
+    "card_title_3": "Baixe Seu QR Code",
+    "card_description_1": "Digite qualquer texto na caixa de entrada para criar o QR Code.",
+    "card_description_2": "Personalize seu QR Code da melhor forma, altere cores e escolha diferentes logos.",
+    "card_description_3": "Obtenha seu QR Code em diferentes formatos (png, svg, jpeg), faça o download e pronto.",
+    "about_title": "Sobre o EasyQR",
+    "about_text_1": "EasyQR é uma ferramenta gratuita e intuitiva que permite gerar QR Codes em segundos. Com ela, você pode criar códigos personalizados para links, textos, números, contatos, Wi-Fi e muito mais, tudo com apenas alguns cliques.",
+    "about_text_2": "Crie rapidamente QR Codes totalmente personalizáveis. Escolha uma cor de fundo, cor principal, talvez um logo personalizado.",
+    "about_text_2_2": "Personalize o código ao seu estilo.",
+    "about_text_3": "Finalmente, você pode baixar e compartilhar o QR Code gerado em diferentes formatos. Este projeto faz parte do meu portfólio pessoal, você pode encontrar mais informações no rodapé.",
+    "contact": "Contato"
+}

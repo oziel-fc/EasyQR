@@ -20,7 +20,7 @@
 /* title */
 .about_title {
     height: 7%;
-    width: 150px;
+    width: auto;
     border-radius: 50px;
     padding: 10px 15px;
     background-color: var(--logo-color);
