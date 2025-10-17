@@ -1,7 +1,5 @@
 import { useState } from "react";
 import styles from "./ButtonTheme.module.css";
-import imageA from "../About/About";
-
 
 const ButtonTheme = () => {
     const [checked, setChecked] = useState(false);
