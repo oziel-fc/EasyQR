@@ -1,15 +1,23 @@
+import { useRef, useEffect } from "react";
 import styles from "./About.module.css";
 import image_qr from "@assets/about/image_qr.png"
 import image_design from "@assets/about/image_design.png"
 import image_download from "@assets/about/image_download.png"
 import { useTranslation } from "react-i18next";
+import useScrollStore from "./handleScroll";
 
 const About = () => {
     const { t } = useTranslation();
+    const ref = useRef<HTMLDivElement | null>(null);
+    const { setRef } = useScrollStore();
+
+    useEffect(() => {
+        setRef(ref.current);
+    }, [setRef]);
 
     return (
         <section className={styles.about}>
-            <div className={styles.about_container}>
+            <div className={styles.about_container} ref={ref}>
                 <div className={styles.about_title}><h1 style={{fontSize: "20px"}}>{t("about_title")}</h1></div>
                 <div className={styles.about_content}>
                     {/* left side */}

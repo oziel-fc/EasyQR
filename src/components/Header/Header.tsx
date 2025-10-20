@@ -3,10 +3,12 @@ import ButtonTheme from './ButtonTheme';
 import styles from './Header.module.css';
 import logo from "@assets/header/easyqr_logo.png";
 import { useTranslation } from "react-i18next";
+import useScrollStore from '../About/handleScroll';
 
 
 const Header = () => {
   const { t } = useTranslation();
+  const scroll = useScrollStore().scrollToRef;
   
   return (
     <header className={styles.header}>
@@ -19,7 +21,9 @@ const Header = () => {
         </div>
         
         <div className={styles.right_header}>
-          <span className={styles.about}>{t("about")}</span>
+          <div onClick={scroll} style={{cursor: "pointer"}}>
+            <span className={styles.about}>{t("about")}</span>
+          </div>
           <ButtonLanguage/>
           <ButtonTheme/>
         </div>
