@@ -32,7 +32,6 @@ const DownloadButton = ({textButton, addClass}: ButtonTextProps) => {
       return () => Observer.disconnect();
     }
   }, []);
-  console.log(widthButton)
 
 
   return (
