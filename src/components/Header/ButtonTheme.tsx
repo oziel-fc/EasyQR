@@ -1,8 +1,11 @@
 import { useState } from "react";
 import styles from "./ButtonTheme.module.css";
+import useToggleImageTheme from "../Description/toggleImageTheme";
 
 const ButtonTheme = () => {
     const [checked, setChecked] = useState(false);
+    const imagesDescriptionTheme = useToggleImageTheme()
+
     const themes = [
         {
             "--font-color": "white",
@@ -21,20 +24,16 @@ const ButtonTheme = () => {
 
     ]
     const changeColor = () => {
-        if (checked) {
-            const darkTheme = themes[0]
-            for (const [atr, value] of Object.entries(darkTheme)) {
-                document.documentElement.style.setProperty(`${atr}`, `${value}`);
-            }
+        const oppositeChecked = !checked;
+        const theme = oppositeChecked ? themes[1] : themes[0];
+
+        for (const [key, value] of Object.entries(theme)) {
+            document.documentElement.style.setProperty(key, value);
         }
-        else {
-            const lightTheme = themes[1]
-            for (const [atr, value] of Object.entries(lightTheme)) {
-                document.documentElement.style.setProperty(`${atr}`, `${value}`);
-            }
-        }
-        setChecked(!checked)
+        imagesDescriptionTheme.setValue(oppositeChecked ? "light" : "dark");
+        setChecked(oppositeChecked)
     };
+    console.log(imagesDescriptionTheme.value)
 
     return (
         <label className={`${styles.theme_toggle} ${checked ? styles.active : ""}`}>

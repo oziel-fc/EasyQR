@@ -1,12 +1,11 @@
+import useToggleImageTheme from "./toggleImageTheme";
 import styles from "./ToolDescription.module.css";
-import icon_url from "@assets/description/icon_url.png";
-import icon_customize from "@assets/description/icon_customize.png";
-import icon_download from "@assets/description/icon_download.png";
 import { useTranslation } from "react-i18next";
 
 
 const Description = () => {
   const { t } = useTranslation();
+  const imagePath = useToggleImageTheme().getImages();
 
   return (
     <section className={styles.description}>
@@ -17,7 +16,7 @@ const Description = () => {
           {/* Card 1 */}
           <div className={styles.hover_change}>
             <div className={styles.tool_description}>
-              <img src={icon_url} alt="url icon" />
+              <img src={imagePath.iconContent} alt="url icon" />
               <h3 style={{fontSize: "24px"}}>{t("card_title_1")}</h3>
               <p style={{color: "rgb(173, 173, 173)"}}>{t("card_description_1")}</p>
             </div>
@@ -25,7 +24,7 @@ const Description = () => {
           {/* Card 2 */}
           <div className={styles.hover_change}>
             <div className={styles.tool_description}>
-              <img src={icon_customize} alt="customize icon" />
+              <img src={imagePath.iconDesign} alt="customize icon" />
               <h3 style={{fontSize: "24px"}}>{t("card_title_2")}</h3>
               <p style={{color: "rgb(173, 173, 173)"}}>{t("card_description_2")}</p>
             </div>
@@ -33,7 +32,7 @@ const Description = () => {
           {/* Card 3 */}
           <div className={styles.hover_change}>
             <div className={styles.tool_description}>
-              <img src={icon_download} alt="download icon" />
+              <img src={imagePath.iconDownload} alt="download icon" />
               <h3 style={{fontSize: "24px"}}>{t("card_title_3")}</h3>
               <p style={{color: "rgb(173, 173, 173)"}}>{t("card_description_3")}</p>
             </div>

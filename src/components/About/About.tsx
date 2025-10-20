@@ -18,7 +18,7 @@ const About = () => {
                             <p>{t("about_text_1")}</p>
                         </div>
                         <div className={styles.about_image}>
-                            <img src={image_design} alt="" />
+                            <img src={image_qr} alt="" />
                         </div>
                         <div className={styles.about_text}>
                             <p>{t("about_text_3")}</p>
@@ -27,7 +27,7 @@ const About = () => {
                     {/* right side */}
                     <div className={styles.side_right}>
                         <div className={styles.about_image}>
-                            <img src={image_qr} alt="image about"/>
+                            <img src={image_design} alt="image about"/>
                         </div> 
                         <div className={styles.about_text}>
                             <p>{t("about_text_2")} <br/>{t("about_text_2_2")}</p>
