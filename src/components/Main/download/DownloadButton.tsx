@@ -3,6 +3,7 @@ import styles from "./DownloadButton.module.css"
 import arrow_down from "@assets/header/arrow_down.png";
 import arrow_up from "@assets/header/arrow_up.png";
 import download_icon from "@assets/main/download_icon.png";
+import useDownloadImage from "./DownloadImage";
 
 type ButtonTextProps = {
   textButton: string;
@@ -11,10 +12,10 @@ type ButtonTextProps = {
 
 const DownloadButton = ({textButton, addClass}: ButtonTextProps) => {
   const [menu, showMenu] = useState(false)
-  const [imgSelected, setImgFormat] = useState("");
   const imgFormats = [
-    '.png', '.svg', '.jpeg'
+    '.png', '.jpeg', '.webp'
   ]
+  const { downloadFormatImg } = useDownloadImage();
 
   // Reference the button element
   const refWidthParent = useRef<HTMLDivElement>(null);
@@ -27,7 +28,6 @@ const DownloadButton = ({textButton, addClass}: ButtonTextProps) => {
         const newWidth: string = `${refWidthParent.current?.offsetWidth}`
         setWidthButton(`${newWidth}px`)
       })
-
       Observer.observe(refWidthParent.current)
       return () => Observer.disconnect();
     }
@@ -49,6 +49,7 @@ const DownloadButton = ({textButton, addClass}: ButtonTextProps) => {
                 <div
                   key={format}
                   className={styles.option_format}
+                  onClick={() => downloadFormatImg(format)}
                 >
                   <span>{format}</span>
                   <img className={styles.img_download} src={download_icon} alt="download icon" />

@@ -2,8 +2,8 @@ import styles from './Main.module.css'
 import ColorPicker from './ColorPicker'
 import InputText from './InputText'
 import QRCode from './QRCode'
-import GeneratorButton from './GeneratorButton'
-import DownloadButton from './DownloadButton'
+// import GeneratorButton from './GeneratorButton'
+import DownloadButton from './download/DownloadButton'
 import { useState } from 'react'
 import { useTranslation } from "react-i18next";
 

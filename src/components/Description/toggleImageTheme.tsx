@@ -18,13 +18,13 @@ const imagesAboutCardsLight = {
     iconDownload: icon_download_light,
 };
 
-type themeStoredProps = {
+type themeStored = {
     value: string;
     setValue: (v: string) => void;
     getImages: () => typeof imagesAboutCardsDark;
 };
 
-const useToggleImageTheme = create<themeStoredProps>((set, get) => ({
+const useToggleImageTheme = create<themeStored>((set, get) => ({
     value: "dark",
     setValue: (newValue) => set({ value: newValue }),
     getImages: () => {

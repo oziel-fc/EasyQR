@@ -1,12 +1,12 @@
 import { create } from "zustand";
 
-type ScrollStore = {
+type scrollStored = {
     refValue: HTMLDivElement | null;
     setRef: (element: HTMLDivElement | null) => void;
     scrollToRef: () => void;
 };
 
-const useScrollStore = create<ScrollStore>((set, get) => ({
+const useScrollStore = create<scrollStored>((set, get) => ({
     refValue: null,
 
     setRef: (element) => set({ refValue: element }),
@@ -17,4 +17,5 @@ const useScrollStore = create<ScrollStore>((set, get) => ({
     },
 }));
 
+// Creating a function to About from Header
 export default useScrollStore;
