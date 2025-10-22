@@ -2,6 +2,7 @@
     "about": "About",
     "background": "Background",
     "shape": "Shape Color",
+    "size": "Size",
     "input_content": "Enter text for the QR Code",
     "input_logo": "Enter a URL of external logo (optional)",
     "description_title": "EasyQR: Create your Free QR Code",

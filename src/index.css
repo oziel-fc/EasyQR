@@ -1,9 +1,11 @@
 :root {
+    --font-default: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --font-color: white;
     --primary-dark-color: #020109;
     --secondary-dark-color: #0e0d17;
     --tertiary-dark-color: #1d1b2e;
     --logo-color: #5e308f;
+    --default-page-width: 1100px
 }
 
 * {
@@ -12,12 +14,13 @@
   box-sizing: border-box;
 }
 
-html, body {
+body {
   width: 100%;
   height: 100%;
   background-color: var(--secondary-dark-color);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: var(--font-default);
   color: var(--font-color);
+  align-items: center;
 }
 
 a {
@@ -45,4 +48,7 @@ select {
   background: none;  
 }
 
-
+@media (max-width: 1100px) {
+  :root {
+  --default-page-width: 100%;
+}}
