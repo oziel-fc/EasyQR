@@ -1,0 +1,14 @@
+.div_qrcode {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--tertiary-dark-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.object_qr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
