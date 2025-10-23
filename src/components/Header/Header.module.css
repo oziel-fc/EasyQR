@@ -52,7 +52,48 @@ header {
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s ease;
 }
+.div_about {
+    align-items: center;
+    justify-content: center;
+}
 
 .about:hover {
     border-bottom: 2px solid #5e308f;
+}
+
+/* Tablets config */
+@media (max-width: 768px) {
+    .easyqr_logo {
+        width: 40px;
+        height: 40px;
+    }
+    .logo_name {
+        font-size: 22px;
+    }
+    .about {
+        font-size: 18px;
+        margin: 0;
+    }
+    .div_about {
+        width: auto;
+        white-space: nowrap;
+    }
+    .right_header {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 500px) {
+    .right_header {
+        gap: 6px;
+    }
+    .div_about {
+        display: none;
+    }
 }

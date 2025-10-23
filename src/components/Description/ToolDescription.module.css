@@ -85,13 +85,74 @@
     align-items: flex-start;
     justify-content: center;
 }
-
 .tool_description:hover {
     cursor: pointer;
 }
-
 .tool_description img{
     width: 40px;
     height: 40px;
 }
+.tool_description h3 {
+    font-size: 24px;
+}
 
+
+@media (max-width: 768px) {
+    .tutorial_cards {
+        gap: 1%;
+    }
+    .hover_change {
+        width: 32%;
+    }
+}
+@media (max-width: 600px) {
+    .description p {
+        font-size: 15px;
+    }
+    .description img {
+        width: 35px;
+        height: 35px;
+    }
+    .description h1 {
+        font-size: 27px;
+    }
+    .tool_description h3 {
+        font-size: 22px;
+    }
+}
+@media (max-width: 550px) {
+    .description p {
+        font-size: 14px;
+    }
+    .description img {
+        width: 32px;
+        height: 32px;
+    }
+    .description h1 {
+        font-size: 25px;
+    }
+    .tool_description h3 {
+        font-size: 20px;
+    }
+}
+
+/* Chaging style for column */
+@media (max-width: 500px) {
+    .tutorial_cards {
+        height: calc(100% - 80px);
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    .description {
+        height: 600px;
+    }
+    .hover_change {
+        width: 90%;
+    }
+}
+@media (max-width: 450px) {
+    .tutorial_cards {
+        margin-top: 35px;
+    }
+}

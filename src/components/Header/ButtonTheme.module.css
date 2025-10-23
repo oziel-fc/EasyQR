@@ -39,3 +39,44 @@ input:checked + .slider::before {
     background-size: cover;
     background-position: center;
 }
+
+@media (max-width: 768px) {
+    .theme_toggle {
+        margin-right: 10px;
+    }
+    .theme_toggle {
+        width: 50px;
+        height: 30px;
+    }
+    input:checked + .slider::before {
+        transform: translateX(20px);
+    }
+}
+
+@media (max-width: 550px) {
+    .theme_toggle {
+        width: 45px;
+        height: 25px;
+    }
+    .slider::before {
+        width: 22px;
+        height: 22px;
+    }
+    input:checked + .slider::before {
+        transform: translateX(20px);
+    }
+}
+
+@media (max-width: 500px) {
+    .theme_toggle {
+        width: 50px;
+        height: 30px;
+    }
+    .slider::before {
+        width: 26px;
+        height: 26px;
+    }
+    input:checked + .slider::before {
+        transform: translateX(20px);
+    }
+}

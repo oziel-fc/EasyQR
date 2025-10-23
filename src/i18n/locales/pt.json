@@ -2,7 +2,7 @@
     "about": "Sobre",
     "background": "Cor de Fundo",
     "shape": "Cor da Forma",
-    "size": "Tamanho",
+    "size": "Tamanho Logo",
     "input_content": "Insira o texto para o QR Code",
     "input_logo": "Insira uma URL de logo externa (opcional)",
     "description_title": "EasyQR: Crie seu QR Code Gratuito",

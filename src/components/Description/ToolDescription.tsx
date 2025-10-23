@@ -17,7 +17,7 @@ const Description = () => {
           <div className={styles.hover_change}>
             <div className={styles.tool_description}>
               <img src={imagePath.iconContent} alt="url icon" />
-              <h3 style={{fontSize: "24px"}}>{t("card_title_1")}</h3>
+              <h3 >{t("card_title_1")}</h3>
               <p style={{color: "rgb(173, 173, 173)"}}>{t("card_description_1")}</p>
             </div>
           </div>
@@ -25,7 +25,7 @@ const Description = () => {
           <div className={styles.hover_change}>
             <div className={styles.tool_description}>
               <img src={imagePath.iconDesign} alt="customize icon" />
-              <h3 style={{fontSize: "24px"}}>{t("card_title_2")}</h3>
+              <h3 >{t("card_title_2")}</h3>
               <p style={{color: "rgb(173, 173, 173)"}}>{t("card_description_2")}</p>
             </div>
           </div>
@@ -33,7 +33,7 @@ const Description = () => {
           <div className={styles.hover_change}>
             <div className={styles.tool_description}>
               <img src={imagePath.iconDownload} alt="download icon" />
-              <h3 style={{fontSize: "24px"}}>{t("card_title_3")}</h3>
+              <h3 >{t("card_title_3")}</h3>
               <p style={{color: "rgb(173, 173, 173)"}}>{t("card_description_3")}</p>
             </div>
           </div>

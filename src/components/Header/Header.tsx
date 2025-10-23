@@ -21,7 +21,7 @@ const Header = () => {
         </div>
         
         <div className={styles.right_header}>
-          <div onClick={scroll} style={{cursor: "pointer"}}>
+          <div onClick={scroll} className={styles.div_about}>
             <span className={styles.about}>{t("about")}</span>
           </div>
           <ButtonLanguage/>

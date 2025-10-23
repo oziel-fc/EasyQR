@@ -31,7 +31,7 @@
 /* options */
 .size_menu {
     height: 100px;
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -43,7 +43,7 @@
     border-radius: 8px;
     box-shadow: rgba(13, 22, 38, 0.1) 0px 0px 0px 1px, rgba(13, 22, 38, 0.1) 0px 4px 11px;
     margin-top: 8px;
-    position: absolute;
+    position: relative;
     z-index: 1001;
 }
 
@@ -73,4 +73,11 @@
 
 .img_download {
     width: 15px;
+}
+
+
+@media (max-width: 600px) {
+    .menu_formats {
+        width: 100%;
+    }
 }

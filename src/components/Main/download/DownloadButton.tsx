@@ -3,7 +3,7 @@ import styles from "./DownloadButton.module.css"
 import arrow_down from "@assets/header/arrow_down.png";
 import arrow_up from "@assets/header/arrow_up.png";
 import download_icon from "@assets/main/download_icon.png";
-import useDownloadImage from "./DownloadImage";
+import useDownloadImage from "./downloadImage";
 
 type ButtonTextProps = {
   textButton: string;

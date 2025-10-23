@@ -26,6 +26,9 @@
     padding: 10px 15px;
     background-color: var(--logo-color);
 }
+.about_title h1 {
+    font-size: 20px;
+}
 
 /* div content */
 .about_content {
@@ -92,4 +95,46 @@
 
 .side_left p {
     padding-right: 50px;
+}
+
+@media (max-width: 768px) {
+    .about_content p {
+        font-size: 15px;
+        padding: 0;
+    }
+    .about_content::before {
+        left: 49%;
+    }
+}
+
+/* Styling the column type */
+@media (max-width: 600px) {
+    .about {
+        height: auto;
+    }
+    .about_content {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .about_content p {
+        font-size: 16px;
+        padding: 0;
+    }
+    .about_image {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 25px;
+    }
+    .about_image img {
+        height: 300px;
+    }
+    .about_text {
+        width: 80%;
+        margin-top: 25px;
+    }
+    .about_content::before {
+        display: none;          /* Removing the mid bar*/
+    }
 }

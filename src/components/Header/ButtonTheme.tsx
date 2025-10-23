@@ -41,7 +41,7 @@ const ButtonTheme = () => {
     };
 
     return (
-        <label className={`${styles.theme_toggle}`}>
+        <label className={styles.theme_toggle}>
             <input type="checkbox" checked={checked} onChange={() => changeColor()}/>
             <span className={styles.slider}></span>
         </label>

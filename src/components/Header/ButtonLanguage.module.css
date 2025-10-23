@@ -42,7 +42,7 @@
     border-radius: 8px;
     box-shadow: rgb(25 13 38 / 10%) 0px 0px 0px 0px, rgb(30 13 38 / 10%) 0px 4px 11px;
     margin-top: 8px;
-    position: absolute;
+    position: relative;
     z-index: 1001;
 }
 
@@ -74,4 +74,60 @@
 
 .option_language span {
     color: white;
+}
+
+@media (max-width: 768px) {
+    .language {
+        width: 130px;
+    }
+    .language_info span {
+        font-size: 15px;
+    }
+    .option_language span {
+        font-size: 16px;
+    }
+    .change_language_btn {
+        padding: 0px 10px;
+    }
+    .option_language {
+        gap: 10px;
+    }
+    .arrow_btn_menu {
+        width: 12px;
+    }
+}
+
+@media (max-width: 550px) {
+    .language {
+        width: 120px;
+    }
+    .menu_languages {
+        width: 120px;
+    }
+    .change_language_btn {
+        padding: 0px 5px;
+    }
+    .arrow_btn_menu {
+        width: 10px;
+    }
+    .option_language {
+        gap: 8px;
+    }
+    .option_language img {
+        margin-left: 9px;
+    }
+    .img_country {
+        width: 20px;
+    }
+}
+@media (max-width: 450px) {
+    .language_info span {
+        font-size: 13px;
+    }
+    .option_language span {
+        font-size: 13px;
+    }
+    .change_language_btn {
+        padding: 0px 10px;
+    }
 }

@@ -2,7 +2,7 @@
     "about": "O programie",
     "background": "Kolor Tła",
     "shape": "Kolor kształtu",
-    "size": "Rozmiar",
+    "size": "Rozmiar Logo",
     "input_content": "Wprowadź tekst dla kodu QR",
     "input_logo": "Wprowadź adres URL zewnętrznego logo (opcjonalnie)",
     "description_title": "EasyQR: Utwórz swój darmowy kod QR",
