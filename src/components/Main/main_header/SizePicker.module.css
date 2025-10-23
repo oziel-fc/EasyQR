@@ -15,3 +15,15 @@
     gap: 10px;
     border-radius: 10px;
 }
+
+/* Mobile settings */
+@media (max-width: 450px) {
+    .size_picker span {
+        font-size: 15px;
+    }
+    .picker {
+        width: 100px;
+        gap: 10px;
+        border-radius: 6px;
+    }
+}

@@ -37,14 +37,14 @@ const PrimaryColorPicker = ({ color, onChange, titleItem }: ColorPickerProps) =>
           
           { displayColorPicker ? <div className={styles.sketch}>
             <SketchPicker
-            color={color}
-            onChange={(c: any) => onChange(`rgba(${c.rgb.r}, ${c.rgb.g}, ${c.rgb.b}, ${c.rgb.a})`)}
-            presetColors={[]}
+              color={color}
+              onChange={(c: any) => onChange(`rgba(${c.rgb.r}, ${c.rgb.g}, ${c.rgb.b}, ${c.rgb.a})`)}
+              presetColors={[]}
             />
           </div>  : null }
         </div>
 
-        <span id="hexValue">{color.startsWith("rgba") ? rgbaToHex(color).toUpperCase() : color.toUpperCase()}</span>
+        <span>{color.startsWith("rgba") ? rgbaToHex(color).toUpperCase() : color.toUpperCase()}</span>
       </button>
 
       {/* close the sketch when click outside */}

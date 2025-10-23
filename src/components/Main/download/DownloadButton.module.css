@@ -80,4 +80,15 @@
     .menu_formats {
         width: 100%;
     }
+    .download {
+        width: 50%;
+    }
+}
+
+/* Mobile settings */
+@media (max-width: 450px) {
+    .download {
+        width: 60%;
+        height: 45px;
+    }
 }

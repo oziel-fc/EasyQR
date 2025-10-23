@@ -16,9 +16,9 @@ const About = () => {
     }, [setRef]);
 
     // If the condition is true return true
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 600)       // Boolean
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 600)       // Boolean
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 600);
+        const handleResize = () => setIsMobile(window.innerWidth <= 600);
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
     }, []);

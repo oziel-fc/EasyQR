@@ -96,7 +96,7 @@
     font-size: 24px;
 }
 
-
+/* Version for tablets */
 @media (max-width: 768px) {
     .tutorial_cards {
         gap: 1%;
@@ -105,6 +105,24 @@
         width: 32%;
     }
 }
+
+/* Chaging style for column */
+@media (max-width: 600px) {
+    .tutorial_cards {
+        height: calc(100% - 80px);
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    .description {
+        height: 600px;
+    }
+    .hover_change {
+        width: 90%;
+    }
+}
+
+/* Chaging the size of img and texts */
 @media (max-width: 600px) {
     .description p {
         font-size: 15px;
@@ -136,21 +154,7 @@
     }
 }
 
-/* Chaging style for column */
-@media (max-width: 500px) {
-    .tutorial_cards {
-        height: calc(100% - 80px);
-        display: flex;
-        flex-direction: column;
-        margin-top: 25px;
-    }
-    .description {
-        height: 600px;
-    }
-    .hover_change {
-        width: 90%;
-    }
-}
+/* Mobile padding */
 @media (max-width: 450px) {
     .tutorial_cards {
         margin-top: 35px;

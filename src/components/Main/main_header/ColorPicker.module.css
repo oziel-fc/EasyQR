@@ -44,3 +44,21 @@
     left: 0px;
 }
 
+/* Mobile settings */
+@media (max-width: 450px) {
+    .color_picker span {
+        font-size: 15px;
+    }
+    .button_color_picker {
+        width: 100px;
+        gap: 10px;
+        border-radius: 6px;
+    }
+    .button_color_picker span {
+        font-size: 13px;
+    }
+    .current_color {
+        width: 20px;
+        height: 15px;
+    }
+}

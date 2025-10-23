@@ -1,5 +1,5 @@
 import { QRCodeCanvas } from "qrcode.react";
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./QRCode.module.css"
 import useDownloadImage from "../download/downloadImage";
 import { toBase64Image } from "./base64Logo";
@@ -58,4 +58,4 @@ const QRCode = ({backColor, shapeColor, QRCodeValue, externLogo, sizeLogo}: QRCo
   );
 };
 
-export default QRCode;
+export default React.memo(QRCode);

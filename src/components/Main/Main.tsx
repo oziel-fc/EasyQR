@@ -3,7 +3,6 @@ import ColorPicker from './main_header/ColorPicker'
 import SizeSelector from './main_header/SizePicker'
 import InputText from './InputText'
 import QRCode from './qrcode/QRCode'
-// import GeneratorButton from './GeneratorButton'
 import DownloadButton from './download/DownloadButton'
 import { useState } from 'react'
 import { useTranslation } from "react-i18next";
