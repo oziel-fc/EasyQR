@@ -31,4 +31,3 @@ The goal is to provide a simple, modern, and accessible tool for anyone to creat
 
 This project is part of my personal portfolio. Feel free to explore, suggest improvements, or contribute!
 
-
