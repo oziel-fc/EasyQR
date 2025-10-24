@@ -42,7 +42,7 @@ const Main = () => {
   }, [primaryColor]);
 
   // fgColor for mobile version
-  const [fgColorMobile, setFgColorMobile] = useState("#020109");
+  const [fgColorMobile, setFgColorMobile] = useState("#1d1b2e");
   useEffect(() => {
     const interval = setInterval(() => {
       setFgColorMobile(useRgbaToHex(secondaryColor));
