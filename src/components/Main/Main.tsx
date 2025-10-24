@@ -1,12 +1,14 @@
+import { useState, useEffect } from 'react'
+import { useTranslation } from "react-i18next";
 import styles from './Main.module.css'
 import ColorPicker from './main_header/ColorPicker'
 import SizeSelector from './main_header/SizePicker'
-import InputText from './InputText'
+import InputText from './qrcode/InputText'
 import QRCode from './qrcode/QRCode'
 import DownloadButton from './download/DownloadButton'
-import { useState } from 'react'
-import { useTranslation } from "react-i18next";
 import setSize from './main_header/setSize'
+import useRgbaToHex from './main_header/rgbaToHex'
+
 
 const Main = () => {
   const [primaryColor, setPrimaryColor] = useState("#020109")
@@ -17,9 +19,38 @@ const Main = () => {
   const [selectedSize, setSelectedFont] = useState("")
   const getSize = (size: string) => {
     setSelectedFont(size)
-    console.log(size)
   }
 
+  // If the width page is minor than 600 return true for the isMobile
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600)       // Boolean
+  useEffect(() => {
+      const handleResize = () => setIsMobile(window.innerWidth <= 600);
+      window.addEventListener("resize", handleResize);
+      return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Mobile version for Color Picker
+  // Creating bgColor for mobile version
+  const [bgColorMobile, setBgColorMobile] = useState("#020109");
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setBgColorMobile(useRgbaToHex(primaryColor));
+      console.log(bgColorMobile)
+    }, 1000);
+
+    return () => clearInterval(interval); 
+  }, [primaryColor]);
+
+  // fgColor for mobile version
+  const [fgColorMobile, setFgColorMobile] = useState("#020109");
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFgColorMobile(useRgbaToHex(secondaryColor));
+      
+    }, 1000);
+
+    return () => clearInterval(interval); 
+  }, [secondaryColor]);
 
   return (
     <section className={styles.qr_container}>
@@ -36,7 +67,7 @@ const Main = () => {
               <InputText inputTitle={t("input_logo")} elementName='input optional logo' value={linkLogo} onChange={setLogo}/>
             </div>
             <div className={styles.qr_code}>
-              <QRCode backColor={primaryColor} shapeColor={secondaryColor} QRCodeValue={URLValue.trim()} externLogo={linkLogo} sizeLogo={setSize(selectedSize)}/>
+              <QRCode backColor={!isMobile ? primaryColor : bgColorMobile} shapeColor={!isMobile ? secondaryColor : fgColorMobile} QRCodeValue={URLValue.trim()} externLogo={linkLogo} sizeLogo={setSize(selectedSize)}/>
             </div>
             <div className={styles.generator_qr}>
               {/* <GeneratorButton textButton='Generate QRCode' addClass={styles.lower_button}/> */}
@@ -46,6 +77,7 @@ const Main = () => {
         </div>
     </section>
   )
+  
 }
 
 export default Main

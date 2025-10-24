@@ -1,7 +1,7 @@
 import { QRCodeCanvas } from "qrcode.react";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./QRCode.module.css"
-import useDownloadImage from "../download/downloadImage";
+import useDownloadImage from "../download/downloadImage";       // Reference the download button with element QR
 import { toBase64Image } from "./base64Logo";
 
 type QRCodeProps = {
@@ -21,15 +21,15 @@ const QRCode = ({backColor, shapeColor, QRCodeValue, externLogo, sizeLogo}: QRCo
       setRef(refElementDownload.current);
   }, [setRef]);
 
+  // Turning the img on base64 to solve the issues with CORS
   const [logoBase64, setLogoBase64] = useState<string | null>(null);
-
   useEffect(() => {
     async function convertLogo() {
       try {
         const base64 = await toBase64Image(externLogo);
         setLogoBase64(base64);
       } catch (err) {
-        console.error("Erro ao converter imagem para Base64:", err);
+        console.error("Error to convert the image to base64", err);
       }
     }
 

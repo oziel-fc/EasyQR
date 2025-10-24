@@ -15,7 +15,7 @@ const About = () => {
         setRef(ref.current);
     }, [setRef]);
 
-    // If the condition is true return true
+    // If the width page is minor than 600 return true for the isMobile
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 600)       // Boolean
     useEffect(() => {
         const handleResize = () => setIsMobile(window.innerWidth <= 600);
