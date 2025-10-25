@@ -16,10 +16,14 @@
     border-radius: 10px;
 }
 
+.size_picker span {
+    white-space: nowrap;
+}
+
 /* Mobile settings */
 @media (max-width: 450px) {
     .size_picker span {
-        font-size: 15px;
+        font-size: 14px;
     }
     .picker {
         width: 100px;

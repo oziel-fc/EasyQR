@@ -16,10 +16,11 @@ const Main = () => {
   const [URLValue, setURLValue] = useState('')
   const [linkLogo, setLogo] = useState('')
   const { t } = useTranslation();
-  const [selectedSize, setSelectedFont] = useState("")
+  const [selectedSize, setSelectedSize] = useState("")
   const getSize = (size: string) => {
-    setSelectedFont(size)
+    setSelectedSize(size)
   }
+
 
   // If the width page is minor than 600 return true for the isMobile
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 600)       // Boolean
@@ -29,13 +30,15 @@ const Main = () => {
       return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+
   // Mobile version for Color Picker
   // Creating bgColor for mobile version
   const [bgColorMobile, setBgColorMobile] = useState("#020109");
   useEffect(() => {
+    if (!primaryColor) return;
+
     const interval = setInterval(() => {
       setBgColorMobile(useRgbaToHex(primaryColor));
-      console.log(bgColorMobile)
     }, 1000);
 
     return () => clearInterval(interval); 
@@ -44,9 +47,9 @@ const Main = () => {
   // fgColor for mobile version
   const [fgColorMobile, setFgColorMobile] = useState("#1d1b2e");
   useEffect(() => {
+    
     const interval = setInterval(() => {
       setFgColorMobile(useRgbaToHex(secondaryColor));
-      
     }, 1000);
 
     return () => clearInterval(interval); 

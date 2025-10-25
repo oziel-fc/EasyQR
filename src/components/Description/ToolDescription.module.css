@@ -150,7 +150,7 @@
         font-size: 25px;
     }
     .tool_description h3 {
-        font-size: 20px;
+        font-size: 19px;
     }
 }
 
@@ -158,5 +158,8 @@
 @media (max-width: 450px) {
     .tutorial_cards {
         margin-top: 35px;
+    }
+    .description h1 {
+        font-size: 23px;
     }
 }

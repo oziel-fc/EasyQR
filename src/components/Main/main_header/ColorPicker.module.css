@@ -47,7 +47,8 @@
 /* Mobile settings */
 @media (max-width: 450px) {
     .color_picker span {
-        font-size: 15px;
+        font-size: 14px;
+        white-space: nowrap;
     }
     .button_color_picker {
         width: 100px;
