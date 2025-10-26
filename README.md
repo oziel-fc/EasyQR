@@ -1,5 +1,5 @@
 <div align="center">
-    <img align="left" width="40" height="40" src="https://github.com/oziel-fc/EasyQR/blob/main/src/assets/header/easyqr_logo.png">
+    <img align="left" width="40" height="40" src="src/assets/header/easyqr_logo.png">
      <h1 align="left">EasyQR</h1>  
   </br>
 </div>
