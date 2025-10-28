@@ -21,13 +21,17 @@ With a modern and user-friendly interface, you can turn any text, link, number, 
 
 ## About the project
 
-**EasyQR** was built with **React** and **TypeScript** as part of my **personal portfolio**, focusing on **performance, responsiveness**, and **ease of use**.
+**EasyQR** was built with **React** and **TypeScript** as part of my personal portfolio, focusing on **performance, responsiveness**, and ease of use.
 The goal is to provide a simple, modern, and accessible tool for anyone to create personalized QR Codes in seconds.
 
 
 
-## Author
-**Developed by [oziel-fc](https://github.com/oziel-fc)**
+## Disclaimer
+
+**EasyQR** is a personal, non-commercial project created for educational and portfolio purposes.
+The developer is not responsible for any misuse, nor for QR Codes generated or the improper use of third-party images.
+Users are **fully responsible** for how they generate, share, and store their QR Codes.
+
 
 This project is part of my personal portfolio. Feel free to explore, suggest improvements, or contribute!
 

@@ -7,7 +7,6 @@ import InputText from './qrcode/InputText'
 import QRCode from './qrcode/QRCode'
 import DownloadButton from './download/DownloadButton'
 import setSize from './main_header/setSize'
-import useRgbaToHex from './main_header/rgbaToHex'
 
 
 const Main = () => {
