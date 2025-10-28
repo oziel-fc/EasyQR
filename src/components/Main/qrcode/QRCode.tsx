@@ -58,4 +58,4 @@ const QRCode = ({backColor, shapeColor, QRCodeValue, externLogo, sizeLogo}: QRCo
   );
 };
 
-export default React.memo(QRCode);
+export default QRCode;

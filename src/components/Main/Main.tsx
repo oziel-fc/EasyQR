@@ -38,7 +38,7 @@ const Main = () => {
     if (!primaryColor) return;
 
     const interval = setInterval(() => {
-      setBgColorMobile(useRgbaToHex(primaryColor));
+      setBgColorMobile(primaryColor);
     }, 1000);
 
     return () => clearInterval(interval); 
@@ -49,7 +49,7 @@ const Main = () => {
   useEffect(() => {
     
     const interval = setInterval(() => {
-      setFgColorMobile(useRgbaToHex(secondaryColor));
+      setFgColorMobile(secondaryColor);
     }, 1000);
 
     return () => clearInterval(interval); 

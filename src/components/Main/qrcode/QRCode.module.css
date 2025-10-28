@@ -1,6 +1,6 @@
 .div_qrcode {
-    height: 100%;
-    aspect-ratio: 1 / 1;
+    height: auto;
+    width: auto;
     border: 2px solid var(--tertiary-dark-color);
     border-radius: 5px;
     display: flex;
