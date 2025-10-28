@@ -1,4 +1,4 @@
-import useToggleImageTheme from "./toggleImageTheme";
+import useToggleImageTheme from "../utils/toggleImageTheme";
 import styles from "./ToolDescription.module.css";
 import { useTranslation } from "react-i18next";
 

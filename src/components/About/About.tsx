@@ -4,7 +4,7 @@ import image_qr from "@assets/about/image_qr.png"
 import image_design from "@assets/about/image_design.png"
 import image_download from "@assets/about/image_download.png"
 import { useTranslation } from "react-i18next";
-import useScrollStore from "./handleScroll";
+import useScrollStore from "../utils/handleScroll";
 
 const About = () => {
     const { t } = useTranslation();

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "./ButtonTheme.module.css";
-import useToggleImageTheme from "../Description/toggleImageTheme";
+import useToggleImageTheme from "../utils/toggleImageTheme";
 
 const ButtonTheme = () => {
     const [checked, setChecked] = useState(() => {

@@ -6,7 +6,7 @@ import SizeSelector from './main_header/SizePicker'
 import InputText from './qrcode/InputText'
 import QRCode from './qrcode/QRCode'
 import DownloadButton from './download/DownloadButton'
-import setSize from './main_header/setSize'
+import setSize from '../utils/setSize'
 
 
 const Main = () => {

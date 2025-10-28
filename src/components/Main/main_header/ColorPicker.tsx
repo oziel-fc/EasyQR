@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { SketchPicker } from 'react-color'
 import styles from './ColorPicker.module.css'
-import useRgbaToHex from './rgbaToHex';
+import useRgbaToHex from '../../utils/rgbaToHex';
 
 type ColorPickerProps = {
   titleItem: string;

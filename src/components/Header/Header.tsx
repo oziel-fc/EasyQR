@@ -3,7 +3,7 @@ import ButtonTheme from './ButtonTheme';
 import styles from './Header.module.css';
 import logo from "@assets/header/easyqr_logo.png";
 import { useTranslation } from "react-i18next";
-import useScrollStore from '../About/handleScroll';
+import useScrollStore from '../utils/handleScroll';
 
 
 const Header = () => {
