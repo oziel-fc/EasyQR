@@ -39,7 +39,7 @@ const QRCode = ({backColor, shapeColor, QRCodeValue, externLogo, sizeLogo}: QRCo
   return (
     <div className={styles.div_qrcode} style={{ position: "relative", display: "inline-block" }}>
       <QRCodeCanvas className={styles.object_qr} ref={refElementDownload}
-        value={QRCodeValue ? QRCodeValue : "null"}
+        value={QRCodeValue ? QRCodeValue : "https://easyqr-lite.vercel.app/"}
         size={1000}
         bgColor={backColor}
         fgColor={shapeColor}
